@@ -1,7 +1,7 @@
+import {api_key, base_url} from "../../utils/constants.ts";
 import {setWeather} from "../weather/weatherSlice.ts";
 import {setMessage} from "../message/messageSlice.ts";
 import type {AppDispatch} from "../../app/store.ts";
-import {api_key, base_url} from "../../utils/constant.ts";
 
 export const fetchWeather = (city: string) => async (dispatch: AppDispatch) => {
     try {
