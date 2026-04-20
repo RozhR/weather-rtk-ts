@@ -1,7 +1,7 @@
 import type {SubmitEvent} from "react";
 import {useState} from "react";
-import {fetchWeather} from "../features/api/weatherAction.ts";
 import {useAppDispatch} from "../app/hooks.ts";
+import {putCity} from "../features/city/citySlice.ts";
 
 const Form = () => {
     const [city, setCity] = useState('');
@@ -10,7 +10,7 @@ const Form = () => {
 
     const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
-        dispatch(fetchWeather(city));
+        dispatch(putCity(city));
         setCity('')
     }
 
