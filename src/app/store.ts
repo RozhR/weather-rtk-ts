@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import city from "../features/city/citySlice.ts"
-import {weatherApi} from "../features/api/weatherAction.ts";
+import {weatherApi} from "../features/api/weatherActions.ts";
 import {setupListeners} from "@reduxjs/toolkit/query";
 
 export const store = configureStore({

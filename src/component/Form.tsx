@@ -7,11 +7,10 @@ const Form = () => {
     const [city, setCity] = useState('');
     const dispatch = useAppDispatch();
 
-
     const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        dispatch(putCity(city));
-        setCity('')
+        e.preventDefault()
+        dispatch(putCity(city.toLowerCase().trim()));
+        setCity('');
     }
 
     return (
