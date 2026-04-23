@@ -12,6 +12,7 @@ export const store = configureStore({
         getDefaultMiddleware().concat(weatherApi.middleware),
 })
 
+// window.addEventListener('focus', () => store.dispatch(weatherApi.util.n))
 setupListeners(store.dispatch)
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -8,6 +8,7 @@ export const weatherApi = createApi({
     endpoints: builder => ({
         getWeatherByCity: builder.query<WeatherInfo, string>({
             query: (city: string) => `?q=${city}&appid=${api_key}&units=metric`,
+            keepUnusedDataFor: 10,
             transformResponse: (data: WeatherInfoResponse) => ({
                 city: data.name,
                 country: data.sys.country,
